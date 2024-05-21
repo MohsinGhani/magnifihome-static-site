@@ -9,7 +9,7 @@ import Footer from "@/components/Footer";
 const HomePage = () => {
   return (
     <div>
-      <div className="px-5 md:px-[450px]">
+      <div>
         <div className="h-[950px] ">
           <img
             src="assets/images/home.png"
