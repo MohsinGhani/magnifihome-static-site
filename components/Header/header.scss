@@ -1,0 +1,40 @@
+.header_drawer {
+    .ant-drawer-body {
+      padding: 0;
+    }
+  
+    .ant-drawer-header-title {
+      button {
+        width: fit-content;
+      }
+    }
+
+    .ant-menu-item-selected {
+      background-color: transparent;
+    }
+    :where(.css-1pyt2za).ant-btn-primary {
+        color: #fff;
+        background-color: #0b3a6e;
+        box-shadow: 0 2px 0 rgba(1, 29, 45, 0.39);
+    }
+    button {
+      width: 100%;
+    }
+  }
+
+  .BuyButton-Button {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin-top: 15px;
+  }
+  
+  .ant-menu-item-only-child {
+    height: auto !important;
+  }
+  
+  // .ant-menu-overflow-item::after {
+  //   border-bottom-width: 0 !important;
+  //   border-bottom-color: transparent !important;
+  // }
+  

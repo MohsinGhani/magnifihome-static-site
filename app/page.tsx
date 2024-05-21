@@ -1,113 +1,202 @@
-import Image from "next/image";
+/* eslint-disable jsx-a11y/alt-text */
+/* eslint-disable @next/next/no-img-element */
+"use client";
+import React from "react";
+import { CaretRightOutlined } from "@ant-design/icons";
+import { Col, Row } from "antd";
+import Footer from "@/components/Footer";
 
-export default function Home() {
+const HomePage = () => {
   return (
-    <main className="flex min-h-screen flex-col items-center justify-between p-24">
-      <div className="z-10 w-full max-w-5xl items-center justify-between font-mono text-sm lg:flex">
-        <p className="fixed left-0 top-0 flex w-full justify-center border-b border-gray-300 bg-gradient-to-b from-zinc-200 pb-6 pt-8 backdrop-blur-2xl dark:border-neutral-800 dark:bg-zinc-800/30 dark:from-inherit lg:static lg:w-auto  lg:rounded-xl lg:border lg:bg-gray-200 lg:p-4 lg:dark:bg-zinc-800/30">
-          Get started by editing&nbsp;
-          <code className="font-mono font-bold">app/page.tsx</code>
-        </p>
-        <div className="fixed bottom-0 left-0 flex h-48 w-full items-end justify-center bg-gradient-to-t from-white via-white dark:from-black dark:via-black lg:static lg:size-auto lg:bg-none">
-          <a
-            className="pointer-events-none flex place-items-center gap-2 p-8 lg:pointer-events-auto lg:p-0"
-            href="https://vercel.com?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            By{" "}
-            <Image
-              src="/vercel.svg"
-              alt="Vercel Logo"
-              className="dark:invert"
-              width={100}
-              height={24}
-              priority
-            />
-          </a>
+    <div>
+      <div className="px-5 md:px-[450px]">
+        <div className="h-[950px] ">
+          <img
+            src="assets/images/home.png"
+            className="absolute z-[-1] top-0 right-0 w-full h-[950px]"
+          />
+          <div className="text-white max-w-[845px]">
+            <h1 className="md:text-[64px] text-[48px] mb-[24px] font-semibold font-merriweather">
+              Preserving Home Value
+            </h1>
+            <p className="md:text-[32px] text-[20px] mb-[32px]">
+              For most homeowners, their home is the most valuable single asset
+              they will own
+            </p>
+            <p className="md:text-[32px] text-[20px] ">
+              Protect the value of that asset by memorializing key home and
+              household details for future reference and value creation
+            </p>
+          </div>
+
+          <div className="sm:mt-[100px] mt-[44px] bg-white shadow-lg rounded-2xl px-[20px] py-[25px] sm:py-[40px]">
+            <Row justify="space-between" gutter={[16, 16]}>
+              {item?.map((t: any, i: number) => (
+                <Col span={24} sm={6} key={i}>
+                  <div className="flex gap-[20px] items-center sm:flex-col text-center mx-auto max-w-none sm:max-w-[150px] ">
+                    <img
+                      src={t?.img}
+                      alt="Image 1"
+                      className="w-[50px] sm:w-[100px]"
+                    />
+                    <p className="text-lg font-medium">{t?.text}</p>
+                  </div>
+                </Col>
+              ))}
+            </Row>
+          </div>
+        </div>
+
+        {/* 2 section */}
+        <div
+          className="flex justify-between w-full mb-[40px] md:mb-[120px]"
+          id="targetSection"
+        >
+          <div>
+            <h2 className="text-blue-900 text-2xl font-medium w-full md:w-[50%] font-mono">
+              About Magnifi Home - Our Product - Blockchain Household and Home
+              Improvement Record Keeping
+            </h2>
+
+            <div className="w-full gap-[50px] flex flex-col md:flex md:flex-row">
+              <div className="w-full">
+                <img src="assets/images/GroupHome.png" className="w-full" />
+              </div>
+
+              <div className="w-full">
+                <p>
+                  Magnifi Home through our BLOCKDRIVE tool, helps facilitate a
+                  transparent marketplace where homeowners can create and own a
+                  digital record for their property, the property contents, and
+                  any improvements & upgrades.
+                </p>
+                <div className="flex gap-2">
+                  <span className="mt-4">
+                    <CaretRightOutlined />
+                  </span>
+                  <p className="mt-4">
+                    Floor plans, property maps, building permits, utility
+                    easements, etc.
+                  </p>
+                </div>
+                <div className="flex gap-2">
+                  <span className="mt-4">
+                    <CaretRightOutlined />
+                  </span>
+                  <p className="mt-4">
+                    Kitchen & bathroom remodels, sustainable energy initiatives,
+                    roof/window/siding replacements, HVAC or other home utility
+                    upgrades, etc.
+                  </p>
+                </div>
+                <div className="flex gap-2">
+                  <span className="mt-4">
+                    <CaretRightOutlined />
+                  </span>
+                  <p className="mt-4">
+                    Household contents, including furniture, appliances &
+                    electronics, clothing, artwork, supplies, etc.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        {/* 3 section */}
+        <div className="flex justify-between w-full mb-8">
+          <div>
+            <h2 className="text-blue-900 text-2xl font-medium font-mono w-full md:hidden">
+              These digital records can be used and benefit the homeowner in
+              numerous ways, including:
+            </h2>
+
+            <div className="w-full gap-[50px] flex flex-col md:flex md:flex-row-reverse">
+              <div className="w-full">
+                <img src="assets/images/Group_18.png" className="w-full" />
+              </div>
+
+              <div className="w-full">
+                <h2 className="text-blue-900 text-2xl font-medium font-mono hidden md:block">
+                  These digital records can be used and benefit the homeowner in
+                  numerous ways, including:
+                </h2>
+                <div className="flex gap-2">
+                  <span className="mt-4">
+                    <CaretRightOutlined />
+                  </span>
+                  <p className="mt-4">
+                    The BLOCKDRIVE indexing of home improvements allows
+                    homeowners better and more accurate property information
+                    which can be helpful to constituencies such as insurers and
+                    lenders / mortgage providers
+                  </p>
+                </div>
+                <div className="flex gap-2">
+                  <span className="mt-4">
+                    <CaretRightOutlined />
+                  </span>
+                  <p className="mt-4">
+                    To track warranty information for easy future access
+                  </p>
+                </div>
+                <div className="flex gap-2">
+                  <span className="mt-4">
+                    <CaretRightOutlined />
+                  </span>
+                  <p className="mt-4">
+                    To document building materials (brands, quantities, grades,
+                    colors, other characteristics)
+                  </p>
+                </div>
+                <div className="flex gap-2">
+                  <span className="mt-4">
+                    <CaretRightOutlined />
+                  </span>
+                  <p className="mt-4">
+                    To accurately represent disclosures of property
+                    improvements, when they occurred and what materials were
+                    used (when selling a home) 
+                  </p>
+                </div>
+                <div className="flex gap-2">
+                  <span className="mt-4">
+                    <CaretRightOutlined />
+                  </span>
+                  <p className="mt-4">
+                    To monetize the aggregate records upon the sale of the
+                    property through the transfer of the BLOCKDRIVE (when
+                    selling a home)
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
 
-      <div className="relative z-[-1] flex place-items-center before:absolute before:h-[300px] before:w-full before:-translate-x-1/2 before:rounded-full before:bg-gradient-radial before:from-white before:to-transparent before:blur-2xl before:content-[''] after:absolute after:-z-20 after:h-[180px] after:w-full after:translate-x-1/3 after:bg-gradient-conic after:from-sky-200 after:via-blue-200 after:blur-2xl after:content-[''] before:dark:bg-gradient-to-br before:dark:from-transparent before:dark:to-blue-700 before:dark:opacity-10 after:dark:from-sky-900 after:dark:via-[#0141ff] after:dark:opacity-40 sm:before:w-[480px] sm:after:w-[240px] before:lg:h-[360px]">
-        <Image
-          className="relative dark:drop-shadow-[0_0_0.3rem_#ffffff70] dark:invert"
-          src="/next.svg"
-          alt="Next.js Logo"
-          width={180}
-          height={37}
-          priority
-        />
-      </div>
-
-      <div className="mb-32 grid text-center lg:mb-0 lg:w-full lg:max-w-5xl lg:grid-cols-4 lg:text-left">
-        <a
-          href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className="mb-3 text-2xl font-semibold">
-            Docs{" "}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className="m-0 max-w-[30ch] text-sm opacity-50">
-            Find in-depth information about Next.js features and API.
-          </p>
-        </a>
-
-        <a
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className="mb-3 text-2xl font-semibold">
-            Learn{" "}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className="m-0 max-w-[30ch] text-sm opacity-50">
-            Learn about Next.js in an interactive course with&nbsp;quizzes!
-          </p>
-        </a>
-
-        <a
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className="mb-3 text-2xl font-semibold">
-            Templates{" "}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className="m-0 max-w-[30ch] text-sm opacity-50">
-            Explore starter templates for Next.js.
-          </p>
-        </a>
-
-        <a
-          href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className="mb-3 text-2xl font-semibold">
-            Deploy{" "}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className="m-0 max-w-[30ch] text-balance text-sm opacity-50">
-            Instantly deploy your Next.js site to a shareable URL with Vercel.
-          </p>
-        </a>
-      </div>
-    </main>
+      <Footer />
+    </div>
   );
-}
+};
+
+export default HomePage;
+
+const item: any = [
+  {
+    img: "assets/images/Group1.png",
+    text: "Manage your home data",
+  },
+  {
+    img: "assets/images/AI.png",
+    text: "AI Enhanced homeowner notifications",
+  },
+  {
+    img: "assets/images/Group3.png",
+    text: "Digital record monetization",
+  },
+  {
+    img: "assets/images/blockchain.png",
+    text: "Blockchain linked digital asset",
+  },
+];
