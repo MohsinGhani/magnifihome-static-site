@@ -1,10 +1,9 @@
 import Footer from "@/components/Footer";
 import { Button } from "antd";
-import { useRouter } from "next/navigation";
+
 import React from "react";
 
 const Insurance = () => {
-  const { push } = useRouter();
   return (
     <div>
       <div className="mb-[10px] min-h-[50vh] px-5 md:px-[450px]">
@@ -14,14 +13,7 @@ const Insurance = () => {
             <p className="mb-4">
               <strong>Services</strong>
             </p>
-            <Button
-              className="mb-10"
-              onClick={() => {
-                push("/login");
-              }}
-            >
-              Partner login
-            </Button>
+            <Button className="mb-10">Partner login</Button>
           </div>
           <p className="mb-4">
             Enhance your insurance product offerings with a tool to aid in
