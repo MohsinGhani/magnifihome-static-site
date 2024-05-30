@@ -2,7 +2,7 @@ import Link from "next/link";
 
 const About = () => {
   return (
-    <div className="flex justify-center flex-col  px-5 md:px-[450px]">
+    <div className="flex justify-center flex-col  px-5  ">
       <div className="mt-[-25px]">
         <div className="container mx-auto py-8 text-16px leading-7">
           <h1 className="text-4xl font-bold mb-4">

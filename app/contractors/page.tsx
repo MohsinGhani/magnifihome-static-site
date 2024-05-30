@@ -5,7 +5,7 @@ import React from "react";
 const Contractors = () => {
   return (
     <div>
-      <div className="mb-[10px] min-h-[50vh] px-5 md:px-[450px]">
+      <div className="mb-[10px] min-h-[50vh] px-5  ">
         <h1 className="text-3xl font-bold mb-4">
           Partner Portal - Contractor Pros
         </h1>

@@ -10,7 +10,7 @@ const RealStateAgent = () => {
   return (
     <>
       {" "}
-      <div className="mb-[10px] min-h-[50vh] px-5 md:px-[450px]">
+      <div className="mb-[10px] min-h-[50vh] px-5  ">
         <h1 className="text-3xl font-bold mb-4">
           Partner Portal – Real Estate Agent & Broker
         </h1>

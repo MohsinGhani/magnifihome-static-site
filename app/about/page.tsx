@@ -11,7 +11,7 @@ const About = () => {
             <div className="w-full h-full flex justify-start items-end backdrop-blur-md"></div>
           </div>
         </div>
-        <div className="mt-[260px] px-5 md:px-[450px]">
+        <div className="mt-[260px] px-5  ">
           <div className="container mx-auto py-8 text-16px">
             <h1 className="text-4xl font-bold mb-4">
               Services For The Home Owners

@@ -6,7 +6,7 @@ import React from "react";
 const Insurance = () => {
   return (
     <div>
-      <div className="mb-[10px] min-h-[50vh] px-5 md:px-[450px]">
+      <div className="mb-[10px] min-h-[50vh] px-5  ">
         <h1 className="text-3xl font-bold mb-4">Partner Portal - Insurance</h1>
         <div className="bg-white p-6 rounded-lg shadow-md">
           <div className="flex justify-between">
